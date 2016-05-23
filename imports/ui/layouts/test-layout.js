@@ -3,6 +3,9 @@ Polymer({
   behaviors:[mwcMixin,mwcRouter],
   getMeteorData:function(){
     this.set("status",Meteor.status().status);
+    if(!Meteor.isCordova){
+      this.notCordova = true;
+    }
   },
   properties:{
     mwcRoute:{
@@ -12,7 +15,8 @@ Polymer({
     },
     status:{
       type:String
-    }
+    },
+    notCordova:Boolean
 
   },
   second:function(){
