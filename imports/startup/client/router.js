@@ -67,8 +67,6 @@ FlowRouter.route("/accounts/:view?", {
     });
   }
 });
-import '../../ui/bower_components/webcomponentsjs/webcomponents-lite.min.js'
-import "../../ui/bower_components/polymer/polymer.html";
 import '../../ui';
 
 
