@@ -2,7 +2,7 @@ Polymer({
   is:"accounts-element",
   behaviors:[mwcMixin],
   getMeteorData:function(){
-    this.selected = FlowRouter.getParam('route') || "sign-in";
+    //this.selected = FlowRouter.getParam('route') || "sign-in";
   },
   properties:{
     selected:{
@@ -28,7 +28,7 @@ Polymer({
       else{
 
         self.toast("successful");
-        FlowRouter.go('/');
+        //FlowRouter.go('/');
       }
     });
   },
@@ -51,7 +51,7 @@ Polymer({
       else{
 
         self.toast("successful");
-        FlowRouter.go('/');
+        //FlowRouter.go('/');
       }
     });
   },
@@ -59,6 +59,6 @@ Polymer({
     this.$.signUp.submit();
   },
   changeRoute:function(newValue,oldValue){
-    FlowRouter.setParams({'view':newValue}); 
+    //FlowRouter.setParams({'view':newValue}); 
   }
 })

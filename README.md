@@ -153,12 +153,14 @@ https://forums.meteor.com/t/polymer-meteor-with-meteor-webcomponents-packages/20
 [mwc:router](https://github.com/meteorwebcomponents/router) - Flowrouter with polymer
 
 
-[MWC Layout](https://github.com/meteorwebcomponents/layout) - polymer layout renderer . Added using bower.
+[MWC Layout](https://github.com/meteorwebcomponents/layout) - polymer layout renderer ..
+
 
 
 ### Other Packages Used
 
 [Flow Router](https://github.com/kadirahq/flow-router) - Carefully Designed Client Side Router for Meteor
+
 
 
 

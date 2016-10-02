@@ -35,7 +35,6 @@ http@1.2.9
 id-map@1.0.8
 insecure@1.0.7
 jquery@1.11.9
-kadira:flow-router@2.12.1
 launch-screen@1.0.12
 livedata@1.0.18
 localstorage@1.0.11
@@ -51,9 +50,7 @@ modules@0.7.6
 modules-runtime@0.7.6
 mongo@1.1.12
 mongo-id@1.0.5
-mwc:layout@1.1.21
 mwc:mixin@1.0.27
-mwc:router@1.0.10
 mwc:synthesis@1.0.41
 mwc:synthesis-compiler@1.0.39
 npm-bcrypt@0.9.1
@@ -63,7 +60,6 @@ ordered-dict@1.0.8
 promise@0.8.7
 random@1.0.10
 rate-limit@1.0.5
-reactive-dict@1.1.8
 reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8

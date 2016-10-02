@@ -1,6 +1,6 @@
 Polymer({
   is:"test-layout",
-  behaviors:[mwcMixin,mwcRouter],
+  behaviors:[mwcMixin],
   getMeteorData:function(){
     this.set("status",Meteor.status().status);
     if(!Meteor.isCordova){
@@ -40,7 +40,7 @@ Polymer({
       else{
 
         self.toast("successful");
-        FlowRouter.go('accounts');
+        //FlowRouter.go('accounts');
       }
     })
   }
