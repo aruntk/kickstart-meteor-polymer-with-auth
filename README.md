@@ -4,6 +4,44 @@
 
 ## Usage
 
+### Installation.
+
+#### Clone the repo 
+```sh
+git clone git@github.com:clayip/meteor-polymer-boilerplate.git your-app-folder
+```
+(change remote url)[https://help.github.com/articles/changing-a-remote-s-url/].
+
+
+#### Build
+
+Type the following in shell. Script install bower components and npm packages.
+```sh
+#shell
+cd your-app-folder
+./build.sh
+```
+### Running
+```sh
+cd your-app-folder #enters folder
+meteor
+```
+
+### Polymer Settings
+
+Create client/lib/settings.js
+
+Why lib directory ? Settings code should run before anything else. 
+
+```js
+/* client/lib/settings.js */
+window.Polymer = {
+  //dom: 'shadow',
+  lazyRegister: true
+};
+```
+
+
 ###Directory structure
 
 ![synth](https://cloud.githubusercontent.com/assets/6007432/14591625/5bea78d6-0532-11e6-82aa-7f86caf6798d.png)
@@ -138,9 +176,11 @@ How to render polymer elements with mwc:layout - https://github.com/meteorwebcom
 
 
 
+
 ### Forum 
 
 https://forums.meteor.com/t/polymer-meteor-with-meteor-webcomponents-packages/20536
+
 
 
 
@@ -156,9 +196,9 @@ https://forums.meteor.com/t/polymer-meteor-with-meteor-webcomponents-packages/20
 [MWC Layout](https://github.com/meteorwebcomponents/layout) - polymer layout renderer . Added using bower.
 
 
+
 ### Other Packages Used
 
 [Flow Router](https://github.com/kadirahq/flow-router) - Carefully Designed Client Side Router for Meteor
-
 
 
