@@ -1,64 +1,56 @@
-Polymer({
-  is:"accounts-element",
-  behaviors:[mwcMixin],
-  getMeteorData:function(){
-    this.selected = FlowRouter.getParam('route') || "sign-in";
-  },
-  properties:{
-    selected:{
-      type:String,
-      value:"sign-in",
-      observer:"changeRoute"
-    }
+/* global mwcRouter, FlowRouter */
 
+Polymer({
+  is: 'accounts-element',
+  behaviors: [mwcMixin],
+  getMeteorData() {
+    this.selected = FlowRouter.getParam('route') || 'sign-in';
   },
-  toast:function(text){
-    var toast = this.$.polymer_toast;
+  properties: {
+    selected: {
+      type: String,
+      value: 'sign-in',
+      observer: 'changeRoute',
+    },
+  },
+  toast(text) {
+    const toast = this.$.polymer_toast;
     toast.text = text;
     toast.toggle();
   },
-  signIn:function(e){
-    var email = e.detail.email;
-    var password = e.detail.password;
-    var self = this;
-    Meteor.loginWithPassword(email, password,function(e){
-      if(e){
-        self.toast(e.reason);
-      }
-      else{
-
-        self.toast("successful");
+  signIn(e) {
+    const email = e.detail.email;
+    const password = e.detail.password;
+    const self = this;
+    Meteor.loginWithPassword(email, password, (err) => {
+      if (err) {
+        self.toast(err.reason);
+      } else {
+        self.toast('successful');
         FlowRouter.go('/');
       }
     });
   },
-
-  _signIn:function(){
+  _signIn() {
     this.$.signIn.submit();
-
   },
-  signUp:function(e){
-    var email = e.detail.email;
-    var password = e.detail.password;
-    var self = this;
-    Accounts.createUser({
-      email: email,
-      password: password
-    },function(e){
-      if(e){
-        self.toast(e.reason);
-      }
-      else{
-
-        self.toast("successful");
+  signUp(e) {
+    const email = e.detail.email;
+    const password = e.detail.password;
+    const self = this;
+    Accounts.createUser({ email, password }, (err) => {
+      if (err) {
+        self.toast(err.reason);
+      } else {
+        self.toast('successful');
         FlowRouter.go('/');
       }
     });
   },
-  _signUp:function(){
+  _signUp() {
     this.$.signUp.submit();
   },
-  changeRoute:function(newValue,oldValue){
-    FlowRouter.setParams({'view':newValue}); 
-  }
-})
+  changeRoute(newValue) {
+    FlowRouter.setParams({ view: newValue });
+  },
+});
