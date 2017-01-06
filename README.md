@@ -51,6 +51,8 @@ window.Polymer = {
 
 Service worker caching is enabled in this app. [client/main.js](client/main.js)
 
+More about Service Worker - https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
+
 This will cache all your assets, js, html, css etc.
 
 What this wont do - It'll not cache db data. 
@@ -60,6 +62,13 @@ To do this there are two methods
 1. Minimongo caching - Use [ground:db](https://github.com/GroundMeteor/db)
 
 2. Use [iron-local-storage](https://elements.polymer-project.org/elements/iron-localstorage)
+
+To check this feature
+
+1. Browser console -> Network tab -> check offline -> Reload window
+2. Open the app in mobile chrome browser. Select settings -> add to home screen. Go to home screen and click on the mwc icon.
+
+How to open app on mobile browser - https://developers.google.com/web/tools/chrome-devtools/remote-debugging/
 
 ### Directory structure
 
