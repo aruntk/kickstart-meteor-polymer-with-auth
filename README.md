@@ -12,8 +12,7 @@ git clone git@github.com:aruntk/kickstart-meteor-polymer-with-app-auth.git your-
 ```
 [change remote url](https://help.github.com/articles/changing-a-remote-s-url/).
 
-
-#### Build
+#### Building
 
 Type the following in shell. Script install bower components and npm packages.
 ```sh
@@ -21,6 +20,14 @@ Type the following in shell. Script install bower components and npm packages.
 cd your-app-folder
 ./build.sh
 ```
+cleanup bower_components script is also there in build.sh
+
+#### Add a component (components are inside imports/ui/bower_components):
+
+1. Install it as `./bower.sh install --save example-component`.
+
+2. Input component name `example-component` to import `example-component/example-component.html`. If you want to import something else (for eg behavior/script/css) skip this step by pressing enter and then manually add it to the `imports/ui/imports.html` file.
+
 ### Running
 ```sh
 cd your-app-folder #enters folder
