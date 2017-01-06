@@ -47,9 +47,21 @@ window.Polymer = {
   lazyRegister: true
 };
 ```
+### Offline First
 
+Service worker caching is enabled in this app. [client/main.js](client/main.js)
 
-###Directory structure
+This will cache all your assets, js, html, css etc.
+
+What this wont do - It'll not cache db data. 
+
+To do this there are two methods
+
+1. Minimongo caching - Use [ground:db](https://github.com/GroundMeteor/db)
+
+2. Use [iron-local-storage](https://elements.polymer-project.org/elements/iron-localstorage)
+
+### Directory structure
 
 ![synth](https://cloud.githubusercontent.com/assets/6007432/14591625/5bea78d6-0532-11e6-82aa-7f86caf6798d.png)
 
@@ -173,6 +185,7 @@ bower.json (imports/ui/bower.json)
 }
 
 ```
+
 ### Docs
 
 Use meteor data reactively inside polymer components - https://github.com/meteorwebcomponents/mixin/blob/master/README.md
@@ -180,6 +193,7 @@ Use meteor data reactively inside polymer components - https://github.com/meteor
 Reactively route polymer projects with flowrouter - https://github.com/meteorwebcomponents/router/blob/master/README.md
 
 How to render polymer elements with mwc:layout - https://github.com/meteorwebcomponents/layout/blob/master/README.md
+
 
 
 
