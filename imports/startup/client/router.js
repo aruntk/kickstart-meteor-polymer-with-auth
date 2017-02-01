@@ -1,6 +1,6 @@
 /* global mwcRouter, FlowRouter, mwcLayout */
 /* eslint-disable no-console */
-import '../../ui';
+import '../../ui/index.html';
 
 FlowRouter.wait();
 
